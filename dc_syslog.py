@@ -35,6 +35,7 @@ def nxos_save():
     print("Configuration saved successfully!")
     print("=" * 60)
 
+
 def router_syslog():
     host = connect.send_command("sh run | in hostname")
     host_name = host.split()[1]
