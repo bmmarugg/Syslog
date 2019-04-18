@@ -111,7 +111,7 @@ def ios_syslog():
 
 
 def nxos_syslog():
-    host = connect.send_command("sh run | in hostname")
+    host = connect.send_command("sh hostname")
     host_name = host.split()[1]
     if "dc1" in host.lower():
         dc1_nxos_syslog = "path/to/dc1/nxos/config"
